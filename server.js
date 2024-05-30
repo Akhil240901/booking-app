@@ -1,9 +1,14 @@
 const express=require('express');
 const morgan=require('morgan');
 const colors=require('colors');
-const dotenv=require('dotenv')
+const dotenv=require('dotenv');
+const connectDB = require('./config/db');
 //config dot env 
 dotenv.config();
+
+
+//mongodb connection of config file
+connectDB();
 
 //rest object
 const app=express();
